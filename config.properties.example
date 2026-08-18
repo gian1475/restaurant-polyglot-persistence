@@ -1,0 +1,28 @@
+# ====================================================================
+# PLANTILLA DE CONFIGURACIÓN - SISTEMA RESTAURANTE MULTI-MOTOR
+# ====================================================================
+# Instrucciones:
+# 1. Copia este archivo y renómbralo como 'config.properties'
+# 2. Reemplaza los valores con las credenciales y hosts de tus bases de datos
+# ====================================================================
+
+# ---- POSTGRESQL (Front-office / Neon Cloud o Local) ----
+PG_URL=jdbc:postgresql://<HOST_POSTGRES>:5432/neondb?sslmode=require
+PG_ADMIN_USER=neondb_owner
+PG_ADMIN_PASS=tu_password_postgres
+
+# ---- ORACLE (Back-office / Cloud Autonomous o On-Premise) ----
+# Para Oracle Cloud con Wallet: jdbc:oracle:thin:@<TNS_ALIAS>?TNS_ADMIN=<RUTA_A_TU_WALLET>
+# Para Oracle Local: jdbc:oracle:thin:@localhost:1521/XEPDB1
+ORA_URL=jdbc:oracle:thin:@db_high?TNS_ADMIN=./wallet
+ORA_USER=admin
+ORA_PASS=tu_password_oracle
+
+# ---- MONGODB (NoSQL Documental / Atlas o Local) ----
+MONGO_URI=mongodb+srv://<USER>:<PASS>@<CLUSTER>.mongodb.net/restaurante_nosql
+MONGO_DB_NAME=restaurante_nosql
+
+# ---- APACHE HIVE (Big Data / Docker Local) ----
+HIVE_URL=jdbc:hive2://localhost:10000/default
+HIVE_USER=
+HIVE_PASS=
